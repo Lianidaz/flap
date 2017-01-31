@@ -19,7 +19,7 @@ function Wall(){
   }
 
   this.hit = function(){
-    if (this.x <= bird.x+bird.fat/2 && this.x >= bird.x-bird.fat/2) {
+    if (this.x <= bird.x+bird.fat && this.x >= bird.x-bird.fat/2) {
       if (this.top >= bird.y-bird.fat/3 || this.bot <= bird.y+bird.fat/3) {
         return true;
       }

@@ -2,7 +2,7 @@ function Bird() {
   this.y = height/2;
   this.x = 30;
 
-  this.fat = 16;
+  this.fat = 25;
 
   this.acc = 0.3;
   this.vel = 0;
@@ -11,8 +11,11 @@ function Bird() {
 
   this.show = function(){
     fill(232);
+    triangle(this.x+this.fat*3/4, this.y-this.fat/6 , this.x+this.fat*1.5,this.y,this.x+this.fat*3/4, this.y+this.fat/6);
     ellipse(this.x,this.y,this.fat*2,this.fat);
-    line(this.x+this.fat*3/4, this.y , this.x+this.fat*5/4 , this.y)
+    strokeWeight(3);
+    point(this.x+this.fat*3/4,this.y-this.fat/5)
+    strokeWeight(1);
     if (!this.wing){
       triangle(this.x-this.fat/2,this.y,this.x+this.fat/2,this.y,this.x,this.y-this.fat);
     } else {

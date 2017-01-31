@@ -46,8 +46,10 @@ function draw() {
 
 function mousePressed(){
   bird.acc=-(0.3+acc*0.02);
+  bird.wing = true;
 }
 
 function mouseReleased(){
   bird.acc = (0.3+acc*0.02);
+  bird.wing = false;
 }

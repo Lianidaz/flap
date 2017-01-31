@@ -7,9 +7,17 @@ function Bird() {
   this.acc = 0.3;
   this.vel = 0;
 
+  this.wing = false;
+
   this.show = function(){
     fill(232);
     ellipse(this.x,this.y,this.fat*2,this.fat);
+    line(this.x+this.fat*3/4, this.y , this.x+this.fat*5/4 , this.y)
+    if (!this.wing){
+      triangle(this.x-this.fat/2,this.y,this.x+this.fat/2,this.y,this.x,this.y-this.fat);
+    } else {
+      triangle(this.x-this.fat/2,this.y,this.x+this.fat/2,this.y,this.x,this.y+this.fat);
+    }
   }
 
   this.update = function(){

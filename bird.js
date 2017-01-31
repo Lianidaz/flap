@@ -2,7 +2,7 @@ function Bird() {
   this.y = height/2;
   this.x = 30;
 
-  this.fat = 25;
+  this.fat = 18;
 
   this.acc = 0.3;
   this.vel = 0;
